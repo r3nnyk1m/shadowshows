@@ -1,19 +1,18 @@
 {
-    "name": "shadowshows",
-    "version": "1.0.0",
-    "description": "인터랙티브 연극 피칭 웹사이트",
-    "scripts": {
-      "start": "live-server",
-      "build": "echo 'No build step required'",
-      "deploy": "npx wrangler pages publish --project-name shadowshows --directory ."
-    },
-    "dependencies": {},
-    "devDependencies": {
-      "live-server": "^1.2.1"
-    },
-    "engines": {
-      "node": ">=14.0.0"
-    },
-    "license": "MIT"
-  }
-  
+  "name": "shadowshows",
+  "version": "1.0.0",
+  "description": "인터랙티브 연극 피칭 웹사이트",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step required'",
+    "deploy": "npx wrangler pages publish --directory ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "license": "MIT"
+}
