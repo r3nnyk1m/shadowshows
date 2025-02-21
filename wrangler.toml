@@ -1,7 +1,6 @@
 name = "shadowshows"
-type = "javascript"
+compatibility_date = "2024-02-21"
 
 [build]
 command = "npm run build"
 watch_dir = "dist"
-upload_dir = "dist"
