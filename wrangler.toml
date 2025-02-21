@@ -1,0 +1,7 @@
+name = "shadowshows"
+type = "javascript"
+
+[build]
+command = "npm run build"
+watch_dir = "dist"
+upload_dir = "dist"
