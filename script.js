@@ -1,12 +1,6 @@
-// 스크롤을 통한 슬라이드 이동
-let currentSlide = 0;
-window.addEventListener("wheel", (event) => {
-    if (event.deltaY > 0) {
-        currentSlide = Math.min(currentSlide + 1, 8);
-    } else {
-        currentSlide = Math.max(currentSlide - 1, 0);
-    }
-    document.querySelector(".container").style.transform = `translateX(-${currentSlide * 100}vw)`;
+// 표지 숨기기
+document.getElementById("enterBtn").addEventListener("click", function() {
+    gsap.to(".intro", { opacity: 0, duration: 1, onComplete: () => document.querySelector(".intro").style.display = "none" });
 });
 
 // Three.js 배경
@@ -16,16 +10,9 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("bgCa
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
+// 파티클 생성
 const particles = new THREE.Group();
 scene.add(particles);
-
-// 포인터 따라오는 파티클
-window.addEventListener("mousemove", (event) => {
-    let x = (event.clientX / window.innerWidth) * 2 - 1;
-    let y = -(event.clientY / window.innerHeight) * 2 + 1;
-    particles.position.x = x * 2;
-    particles.position.y = y * 2;
-});
 
 // 애니메이션 실행
 function animate() {
@@ -33,3 +20,17 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// GSAP ScrollTrigger를 사용하여 슬라이드 하나씩 보이게 하기
+gsap.utils.toArray(".slide").forEach((slide, i) => {
+    gsap.to(slide, {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        scrollTrigger: {
+            trigger: slide,
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
