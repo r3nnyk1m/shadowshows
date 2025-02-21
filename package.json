@@ -4,7 +4,6 @@
   "description": "인터랙티브 연극 피칭 웹사이트",
   "scripts": {
     "start": "live-server",
-    "build": "echo 'No build step required'",
     "deploy": "npx wrangler pages publish --directory ."
   },
   "dependencies": {},
