@@ -10,12 +10,15 @@
 
     <canvas id="bgCanvas"></canvas>  <!-- Three.js 배경 -->
 
-    <div class="nav">
-        <span class="logo">ShadowShows</span>
+    <!-- 표지 (인트로) -->
+    <div class="intro">
+        <h1>ShadowShows</h1>
+        <p>RGB 필터, 모션캡처 그림자, 프로젝션을 활용한 몰입형 연극</p>
+        <button id="enterBtn">Enter</button>
     </div>
 
     <div class="container">
-        <section class="slide active"><h1>🎭 인터랙티브 연극 피칭</h1><p>RGB 필터, 모션캡처 그림자, 프로젝션을 활용한 몰입형 연극</p></section>
+        <section class="slide"><h1>🎭 인터랙티브 연극 피칭</h1><p>RGB 필터, 모션캡처 그림자, 프로젝션을 활용한 몰입형 연극</p></section>
         <section class="slide"><h1>📌 연극 개요</h1><p>RGB 필터 & 모션캡처를 통한 관객 참여형 몰입 연극</p></section>
         <section class="slide"><h1>🔹 비전</h1><p>기술과 예술의 경계를 넘는 새로운 몰입형 연극</p></section>
         <section class="slide"><h1>🎥 유튜브 레퍼런스</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe></section>
@@ -27,6 +30,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 
